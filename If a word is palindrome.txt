@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any word");
+        String word = scan.nextLine();
+
+        // Method 1 reversing the string and checking. The long way
+        String letter = "";
+        for (int i = word.length()-1; i >=0; i--) {
+           letter += word.charAt(i);
+        }
+        if (word.equalsIgnoreCase(letter)){
+            System.out.println("Its a palindrome");
+        }
+        else System.out.println("Its not palindrome");
+        System.out.println();
+
+        // String builder reverse
+        System.out.println("From SringBuilder");
+        StringBuilder sb = new StringBuilder(word);
+        StringBuilder reverse =sb.reverse();
+        if (word.equalsIgnoreCase(reverse.toString())){
+            System.out.println("Palindrome");
+        } else System.out.println("Not palindrome");
+        System.out.println();
+
+        // Comaprison method
+
+        System.out.println("From Comaprison");
+        int start = 0;
+        int end = word.length()-1;
+        while(start<=end){
+            if (word.charAt(start)!=word.charAt(end)){
+                System.out.println("Tis not palindrome");
+               break;
+            }
+            start++;
+            end--;
+        }
+        System.out.println("Tis Palindrome");
+    }
+}

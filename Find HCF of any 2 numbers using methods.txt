@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any two numbers");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int ans = HCF (num1, num2);
+        System.out.println("The HCF is : "+ans);
+    }
+
+    private static int HCF(int num1, int num2) {
+        while (true) {
+            /*First divide num 1 by num 2. The remainder then becomes num2 and num 2 becomes num1
+            And when the remainder of num1/num2 is zero, num2 is the HCF.
+             */
+            //first divide num1 by num 2 and set remainder;
+            int rem = num1%num2;
+            // Now if remainder ==0, HCF is num2. if remainder !=0; num2 is num1 and rem is num2;
+            if (rem==0){
+                return num2;
+            }
+            num1 = num2;
+            num2 = rem;
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        int sum = 0;
+        int counter = 0;
+        while(true) {
+            System.out.println("Please enter any number:");
+            int number = scan.nextInt();
+            if (number ==0){
+                break;
+            }
+            else{
+                counter++;
+                sum += number;
+            }
+        }
+        System.out.println("Total numbers entered :"+counter);
+        System.out.println("Sum of those numbers: "+sum);
+    }
+}

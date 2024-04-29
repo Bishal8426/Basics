@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter any number");
+        int num = scan.nextInt();
+        int sum = 0;
+        int counter =0;
+        for (int i = 1; i <=num ; i++) {
+            sum +=i;
+            counter ++;
+
+        }
+        System.out.println("The sum of numbers upto "+num+" is: "+sum);
+        System.out.println("The average of these is: "+sum/counter);
+    }
+}

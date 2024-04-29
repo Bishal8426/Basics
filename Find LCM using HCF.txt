@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any two numbers");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int ans = LCM(num1, num2);
+        System.out.println("The LCM is : " + ans);
+    }
+
+    private static int LCM(int num1, int num2) {
+        int ans = hcf(num1, num2);
+        return (num1*num2) / ans;
+        }
+
+    private static int hcf(int num1, int num2) {
+        while(true){
+        int rem = num1%num2;
+        if (rem == 0){
+            return num2;
+        }
+        num1 = num2;
+        num2 = rem;
+    }
+
+}
+}

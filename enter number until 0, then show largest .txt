@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        int counter = 0;
+        ArrayList<Integer> inputs = new ArrayList<>();
+        while(true) {
+            System.out.println("Please enter any number:");
+            int number = scan.nextInt();
+            if (number ==0){
+                break;
+            }
+            else{
+                inputs.add(number);
+                if (number>max)
+                    max = number;
+                counter++;
+            }
+        }
+        System.out.println("Total numbers entered :"+ inputs );
+        System.out.println("Total numbers entered :"+counter);
+        System.out.println("Largest among those numbers: "+max);
+    }
+}

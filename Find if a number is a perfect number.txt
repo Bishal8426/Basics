@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any letter; ");
+        int num = scan.nextInt();
+        int ans = factors(num);
+        if (ans==num){
+            System.out.println("Its a perfect number");
+        }
+        else System.out.println("Its not a perfect number");
+
+    }
+    static int factSum = 0;
+    static int factors(int num) {
+        for (int i = 1; i <=num/2 ; i++) {
+            if (num%i==0){
+                factSum +=i;
+            }
+        }
+        return factSum;
+    }
+}

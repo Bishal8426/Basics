@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What,s the target?");
+        double target = scan.nextInt();
+        System.out.println("How many runs achieved till now?");
+        double run1 = scan.nextInt();
+        System.out.println("How many overs left?");
+        double overs = scan.nextInt();
+        // First calculate the required runs to win
+        double run2 = target-run1;
+        //Then divide the runs by overs.
+        double batAvgOvers = run2/overs;
+        double batAvgBall = run2/(overs*6);
+
+        String perOvers = String.format("%.1f", batAvgOvers);
+        String perBall = String.format("%.1f", batAvgBall);
+
+        System.out.println("To win, the team must achieve "+ perOvers+" runs per over or "+perBall+ " runs per ball");
+
+
+    }
+}

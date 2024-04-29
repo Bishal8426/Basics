@@ -1,0 +1,29 @@
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any two numbers");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        System.out.println("What do you want to do? \"+\" \"-\" \"*\" or \"/\" ");
+        String ch = scan.next();
+        if (Objects.equals(ch, "+")){
+            System.out.println(num1+num2);
+        }
+        else if (Objects.equals(ch, "-")){
+            System.out.println(num1-num2);
+        }
+        else if (Objects.equals(ch, "*")) {
+            System.out.println(num1*num2);
+        }
+        else if (Objects.equals(ch, "/")) {
+            System.out.println(num1/num2);
+        }
+        else System.out.println("No such operation possible");
+
+        scan.close();
+    }
+}

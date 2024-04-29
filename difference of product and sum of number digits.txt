@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any number:");
+        int number = scan.nextInt();
+
+        int prod = 1;
+        int sum = 0;
+
+        while (number!=0){
+            int rem = number%10;
+            prod *= rem;
+            sum += rem;
+            number /= 10;
+        }
+        System.out.println("The product of all numbers is :"+ prod);
+        System.out.println("The sum of all numbers is :"+ sum);
+        System.out.println("The difference between product ans sum is: "+ (prod-sum));
+    }
+}

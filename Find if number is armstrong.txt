@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any number:");
+        int number = scan.nextInt();
+        int copy = number;
+
+        int power = (int)Math.log10(number)+1;
+        int sum =0;
+
+        while (copy!=0){
+            int rem = copy%10;
+            sum+= (int) Math.pow(rem,power);
+            copy/=10;
+        }
+        if (sum == number){
+            System.out.println("The number is armstrong number");
+        } else System.out.println("It's not an armstrong number.");
+
+    }
+}

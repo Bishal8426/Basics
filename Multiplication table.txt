@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any number : ");
+        int num1 = scan.nextInt();
+        for (int i = 1; i <=10 ; i++) {
+            int mul = num1*i; // We can use "num1*i" direcly in place of "mul" while printing.
+            // for eg: System.out.ptintln( num1 +" * "+ i+ " = "+ num1*i);
+	    // if formality not needed just print num1*i. eg: System.out.println(num1*i);
+            System.out.println( num1 +" * "+ i+ " = "+ mul);
+        }
+    }
+}

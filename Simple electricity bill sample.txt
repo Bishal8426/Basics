@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many TVs do you have? ");
+        int totalTV = scan.nextInt();
+        System.out.println("Whats their watt? ");
+        int tvWatt = scan.nextInt();
+        System.out.println("How many hours per day do you watch your TVs ?");
+        int tvTime = scan.nextInt();
+
+        System.out.println("How many fans do you have? ");
+        int totalFans = scan.nextInt();
+        System.out.println("Whats their watt? ");
+        int fansWatt = scan.nextInt();
+        System.out.println("How many hours per day do you turn on your fans ?");
+        int fansTime = scan.nextInt();
+
+        int tvPower = totalTV*tvWatt*tvTime/1000*30;
+        int fanPower = totalFans*fansWatt*fansTime/1000*30;
+
+        int electricityCost = 10;
+
+        int totalCost = (tvPower+fanPower)*10;
+        System.out.println("The electricity bill for a month is : "+ totalCost);
+    }
+}

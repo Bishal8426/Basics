@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Training {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter the radius of circle: ");
+        double num = scan.nextDouble();
+        double ans1 = area(num);
+        double ans2 = perimeter(num);
+        String area = String.format("%.2f", ans1);
+        String perimeter = String.format("%.2f", ans2);
+        
+        /*  or you can directly call method into String format.
+            String area = String.format("%.2f", area(num));
+            String perimeter = String.format("%.2f", perimeter(num));*/
+        
+        System.out.println("The area of circle is: "+ area);
+        System.out.println("The perimeter of circle is: "+perimeter);
+    }
+
+    private static double area(double num) {
+        return 3.14*num*num;
+    }
+    static double perimeter(double num){
+        return 2*3.14*num;
+    }
+
+}

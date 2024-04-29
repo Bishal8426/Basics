@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+	// Try and catch has been used for wrong input
+	// Output shows total sum only if at least one number has been entered
+	// Else output says no number entered.
+
+        Scanner scan = new Scanner(System.in);
+
+        int sum =0;
+
+        while(true) {
+
+            System.out.println("Please enter any number or \"x\" to exit  : ");
+            String input = scan.next();
+            if (input.equalsIgnoreCase("x")){
+                break;
+            }
+            try {
+                sum+= Integer.parseInt(input);
+            }
+            catch (Exception e){
+                System.out.println("Letters other than \"x\" are not allowed.");
+            }
+
+        }
+        System.out.println("The program has been closed.");
+        if (sum>0){
+            System.out.println("The sum of total numbers entered is "+ sum);
+        }
+        else{
+            System.out.println("You didn't enter any numbers. ");
+        }
+
+        scan.close();
+
+    }
+}

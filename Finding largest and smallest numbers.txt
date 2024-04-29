@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any two numbers");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+       if ((num1-num2)>0){
+           System.out.println("Largest number among these two is: "+num1);
+       }
+       else {
+           System.out.println("Largest number among these two is: " + num2);
+       }
+        System.out.println();
+       //Simply using Math. function
+
+         int big = Math.max(num1, num2);
+         int small = Math.min(num1, num2);
+        System.out.println("Largest number among these two is: " + big);
+        System.out.println("Smallest number among these two is: " + small);
+
+        scan.close();
+
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Training{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter any two numbers : ");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+
+        int big = Math.max(num1, num2);
+        int small = Math.min(num1, num2);
+
+        while (true){
+            if (big%small ==0){
+                System.out.println("The LCM of "+ num1+" and "+num2+ " is "+ big);
+                break;
+            }
+            big += Math.max(num1, num2);
+        }
+    }
+}
